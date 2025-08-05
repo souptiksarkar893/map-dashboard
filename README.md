@@ -2,7 +2,6 @@
 
 A powerful, user-friendly dashboard for visualizing dynamic weather data on interactive maps with polygon drawing capabilities and timeline controls.
 
-![Dashboard Preview](https://via.placeholder.com/800x400/3498db/ffffff?text=Interactive+Map+Dashboard)
 
 ## 🌟 Features
 
