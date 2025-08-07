@@ -17,7 +17,7 @@ Deploy your own instance in seconds:
 ### Core Functionality
 - **Interactive Map**: Based on Leaflet with smooth pan/zoom controls
 - **Polygon Drawing**: Create custom regions with 3-12 points
-- **Timeline Control**: Hourly resolution across 30-day window (±15 days from Aug 5, 2025)
+- **Timeline Control**: Hourly resolution across 30-day window (±15 days from current date)
 - **Real-time Data**: Weather data from Open-Meteo API
 - **Color Visualization**: Dynamic polygon coloring based on data thresholds
 - **Responsive Design**: Works seamlessly on desktop and mobile
@@ -73,7 +73,7 @@ npm run preview
 ### Timeline Controls
 - **Single Time Mode**: Select specific hour for point-in-time analysis
 - **Range Mode**: Select time windows for trend analysis
-- **Quick Navigation**: "Now" button jumps to current time (Aug 5, 2025)
+- **Quick Navigation**: "Now" button jumps to current time
 - **Visual Indicators**: Current time highlighted on timeline
 
 ### Polygon Management
