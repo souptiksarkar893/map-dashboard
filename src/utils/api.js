@@ -29,8 +29,9 @@ export const fetchWeatherData = async (latitude, longitude, selectedTime, timeRa
       endDate = new Date(selectedTime)
     } else {
       // Default to current time
-      startDate = new Date('2025-08-05T12:00:00')
-      endDate = new Date('2025-08-05T12:00:00')
+      const now = new Date()
+      startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0)
+      endDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0)
     }
 
     const startDateStr = formatDateForAPI(startDate)
@@ -80,7 +81,8 @@ export const fetchWeatherData = async (latitude, longitude, selectedTime, timeRa
         // For range, use the middle time
         targetTime = new Date((timeRange[0].getTime() + timeRange[1].getTime()) / 2)
       } else {
-        targetTime = selectedTime || new Date('2025-08-05T12:00:00')
+        const now = new Date()
+        targetTime = selectedTime || new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0)
       }
 
       const targetTimeStr = formatDateTimeForAPI(targetTime)

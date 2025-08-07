@@ -8,8 +8,12 @@ const TimelineSlider = ({ onTimeChange, onTimeRangeChange }) => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [animationSpeed, setAnimationSpeed] = useState(1000) // milliseconds between steps
   
-  // Create time window: 15 days before and after August 5, 2025
-  const baseDate = useMemo(() => new Date('2025-08-05T00:00:00'), [])
+  // Create time window: 15 days before and after current date
+  const baseDate = useMemo(() => {
+    const now = new Date()
+    // Set to current date at midnight
+    return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0)
+  }, [])
   const startDate = useMemo(() => {
     const date = new Date(baseDate)
     date.setDate(date.getDate() - 15)
@@ -190,7 +194,7 @@ const TimelineSlider = ({ onTimeChange, onTimeRangeChange }) => {
           <button
             className="btn btn-now btn-expanded"
             onClick={jumpToNow}
-            title="Jump to current time (August 5, 2025)"
+            title={`Jump to current time (${baseDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })})`}
           >
             🕐 Jump to Now
           </button>
@@ -207,7 +211,7 @@ const TimelineSlider = ({ onTimeChange, onTimeRangeChange }) => {
             {formatDateTimeShort(timeStamps[0])}
           </span>
           <span className="timeline-label-center">
-            August 5, 2025 (Today)
+            {baseDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} (Today)
           </span>
           <span className="timeline-label-end">
             {formatDateTimeShort(timeStamps[timeStamps.length - 1])}
