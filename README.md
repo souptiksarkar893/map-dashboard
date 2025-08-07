@@ -2,16 +2,6 @@
 
 A powerful, user-friendly dashboard for visualizing dynamic weather data on interactive maps with polygon drawing capabilities and timeline controls.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/souptiksarkar893/map-dashboard)
-
-![Dashboard Preview](https://via.placeholder.com/800x400/3498db/ffffff?text=Interactive+Map+Dashboard)
-
-## 🚀 Quick Deploy
-
-Deploy your own instance in seconds:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/souptiksarkar893/map-dashboard)
-
 ## 🌟 Features
 
 ### Core Functionality
